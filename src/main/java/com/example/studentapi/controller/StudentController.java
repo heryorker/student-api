@@ -100,7 +100,7 @@ public class StudentController {
         return studentService.searchStudents(name, minScore, maxScore,page,pageSize);
     }
 
-    @PostMapping("/bath")
+    @PostMapping("/batch")
     public ResponseEntity<?> addTwoStudents( @RequestBody
                                              @NotEmpty(message = "学生列表不能为空")
                                                  List<@Valid Student> students){
