@@ -169,3 +169,12 @@ GET http://localhost:8080/health
   }
 }
 ```
+
+## API 文档
+
+项目集成了 SpringDoc OpenAPI。启动项目后可以访问：
+
+- Swagger UI：http://localhost:8080/swagger-ui/index.html
+- OpenAPI JSON：http://localhost:8080/v3/api-docs
+
+Swagger UI 支持查看接口路径、请求参数、响应结构，并可以直接发送测试请求。
