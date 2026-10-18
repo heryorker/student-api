@@ -178,3 +178,16 @@ GET http://localhost:8080/health
 - OpenAPI JSON：http://localhost:8080/v3/api-docs
 
 Swagger UI 支持查看接口路径、请求参数、响应结构，并可以直接发送测试请求。
+
+## 自动化测试
+
+项目使用 JUnit、Spring Boot Test、MockMvc 和 Mockito 编写 Controller 层自动化测试，目前覆盖以下场景：
+
+- 根据 ID 查询学生成功，验证 HTTP 状态码和统一响应数据
+- 查询不存在的学生，验证 404 响应
+- 新增学生参数校验失败，验证 400 响应和字段级错误信息
+
+运行全部测试：
+
+```powershell
+.\mvnw.cmd test
